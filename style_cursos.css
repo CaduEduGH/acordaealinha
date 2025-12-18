@@ -1,0 +1,1692 @@
+/* PADRÕES */
+:root {
+    --preto-suave: #2b2b2b;
+    --azul-petroleo: #264653;
+    --azul-indigo: #2E3E75;
+    --bege-areia: #DCC9A6;
+    --verde-folha: #3A704B;
+    --dourado: #C49E44;
+    --blue-mist: #6E94B3;
+    /* --shadow: definir depois */
+}
+
+/* ---------- */
+
+
+/* RESET SIMPLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* ---------- */
+
+
+/* BARRA DE NAVEGAÇÃO */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: #ffffff00;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    top: 0;
+    gap: 0;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #2b2b2b;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.6rem;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    /* ajuste fino da distância do sublinhado */
+    width: 0%;
+    height: 2px;
+    background-color: var(--preto-suave);
+    /* sublinhado da cor do texto */
+    opacity: 0.5;
+    transition: width 0.35s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+
+.home,
+.artes,
+.cursos,
+.sobre {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 5px;
+    box-shadow: -3px -3px 10px #2b2b2b;
+    width: 280px;
+    height: 65px;
+}
+
+.home {
+    background-color: var(--bege-areia);
+    /* transform: rotate(1deg); */
+}
+
+.artes {
+    background-color: var(--dourado);
+}
+
+.cursos {
+    background-color: var(--blue-mist);
+    height: 90px;
+}
+
+.sobre {
+    background-color: var(--verde-folha);
+}
+
+/* ---------- */
+
+
+/* FUNDO DE MADEIRA */
+.fundo-madeira {
+    background-image: url(./elementos/fundomadeira.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 4775px;
+    padding-bottom: 0;
+}
+
+/* ---------- */
+
+
+/* HERO */
+.top-graphics {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 35px;
+}
+
+.logo-fios {
+    position: absolute;
+    top: 0;
+    max-width: 1422px;
+    height: auto;
+    z-index: 1000;
+    pointer-events: none;
+    /*não impedir o clique de algo que está abaixo */
+}
+
+.logo-fios-comp {
+    position: absolute;
+    top: 80px;
+    max-width: 1898px;
+    height: auto;
+    z-index: 1001;
+    pointer-events: none;
+    /*não impedir o clique de algo que está abaixo */
+}
+
+/* ---------- */
+
+
+/* TAG CURSOS */
+.tag-cursos {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 730px;
+    padding-left: 500px;
+}
+
+.imgtagcursos {
+    position: absolute;
+    width: 654px;
+    height: 197px;
+    z-index: 100;
+}
+
+.tag-cursos h1 {
+    position: absolute;
+    z-index: 101;
+    padding-top: 35px;
+    padding-left: 270px;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 6rem;
+    color: var(--azul-petroleo);
+}
+
+/* ---------- */
+
+
+/* PONTOS BÁSICOS */
+.pontos-basicos {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 135px;
+    padding-left: 100px;
+    transition: transform 0.6s ease;
+}
+
+.bg-pb {
+    position: absolute;
+    width: 1313px;
+    height: 896px;
+    background-image: url(./elementos/03_bg_pontos_basicos.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    align-items: flex-start;
+}
+
+.imgpontos {
+    margin-top: 80px;
+    transform: translateX(-100px);
+}
+
+.imgpontos:hover {
+    transform: rotate(2deg);
+}
+
+.info-pb h2 {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5.5rem;
+    color: #2b2b2b;
+    margin-top: 110px;
+}
+
+.info-pb p {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+    color: #2b2b2b;
+    margin-top: 30px;
+    width: 390px;
+}
+
+.botao3_1 {
+    position: relative;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    width: 360px;
+}
+
+.imgbotao3_1 {
+    position: absolute;
+}
+
+.botao3_1 h4 {
+    position: absolute;
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    margin-top: 20px;
+    color: var(--azul-petroleo);
+}
+
+
+/* -------------- */
+
+
+/* PADRÕES E DIAGRAMAS */
+.diagramas {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 820px;
+    transition: transform 0.2s ease;
+}
+
+.bg-pd {
+    position: absolute;
+    width: 1313px;
+    height: 1208.62px;
+    background-image: url(./elementos/03_bg_diagramas.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 20;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.info-pd h2 {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5.5rem;
+    color: #2b2b2b;
+    margin-top: 260px;
+    margin-left: 120px;
+}
+
+.info-pd p {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+    text-align: right;
+    color: #2b2b2b;
+    margin-top: 30px;
+    margin-left: 240px;
+    /* line-height: 40px; */
+    width: 370px;
+}
+
+.botao3_2 {
+    position: relative;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    width: 640px;
+    transform: rotate(-5deg);
+}
+
+.imgbotao3_2 {
+    position: absolute;
+}
+
+.botao3_2 h4 {
+    position: absolute;
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    margin-top: 20px;
+    color: var(--azul-petroleo);
+}
+
+.imgdiag {
+    margin-top: 200px;
+}
+
+.imgdiag:hover {
+    transform: rotate(-7deg);
+}
+
+/* ------------------- */
+
+
+/* GUIA DE MATERIAIS */
+.guia-materiais {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1100px;
+    transition: transform 0.2s ease;
+}
+
+.bg-gm {
+    position: absolute;
+    width: 1313px;
+    height: 896px;
+    background-image: url(./elementos/03_bg_materiais.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotate(2deg);
+    z-index: 30;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    align-items: flex-start;
+}
+
+
+.imgmateriais {
+    margin-top: 100px;
+    transform: translateX(-80px);
+}
+
+.imgmateriais:hover {
+    transform: rotate(1deg);
+}
+
+.info-gm h2 {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5.5rem;
+    color: #2b2b2b;
+    margin-top: 150px;
+}
+
+.info-gm p {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+    color: #2b2b2b;
+    margin-top: 30px;
+    width: 500px;
+}
+
+.botao3_3 {
+    position: relative;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    width: 650px;
+}
+
+.imgbotao3_3 {
+    position: absolute;
+}
+
+.botao3_3 h4 {
+    position: absolute;
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    margin-top: 20px;
+    color: var(--azul-petroleo);
+}
+
+/* ----------------- */
+
+
+/* FOOTER */
+.sitemap {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 1150px;
+}
+
+.bg-sm {
+    position: absolute;
+    width: 1419px;
+    height: 730px;
+    background-image: url(./elementos/bg_sitemap.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0px;
+    align-items: flex-start;
+    padding-top: 200px;
+    padding-right: 70px;
+    color: var(--preto-suave);
+}
+
+.sitemap a {
+    text-decoration: none;
+    color: #2b2b2b;
+}
+
+.sitemap img {
+    display: block;
+    border: none;
+}
+
+.ico-sm {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    gap: 5px;
+    padding-top: 40px;
+}
+
+.ico-youtube {
+    width: 72px;
+    height: 72px;
+    transform: translateX(70px);
+}
+
+.ico-instagram {
+    width: 72px;
+    height: 72px;
+    transform: translateX(80px);
+}
+
+.ico-pinterest {
+    width: 72px;
+    height: 72px;
+    transform: translateX(90px);
+}
+
+.ico-whatsapp {
+    width: 72px;
+    height: 72px;
+    transform: translateX(100px);
+}
+
+.ico-email {
+    width: 72px;
+    height: 72px;
+    transform: translateX(110px);
+}
+
+.home-sm h1 {
+    text-align: right;
+    padding-right: 40px;
+    line-height: 5rem;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+.home-sm h2 {
+    text-align: right;
+    padding-right: 40px;
+    line-height: 5rem;
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.artes-sm h1 {
+    text-align: right;
+    padding-right: 50px;
+    line-height: 5rem;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+.artes-sm h2 {
+    text-align: right;
+    padding-right: 50px;
+    line-height: 5rem;
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.cursos-sm h1 {
+    text-align: right;
+    line-height: 5rem;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+.cursos-sm h2 {
+    text-align: right;
+    line-height: 5rem;
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.sobre-sm h1 {
+    text-align: right;
+    line-height: 5rem;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+.sobre-sm h2 {
+    text-align: right;
+    line-height: 5rem;
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.cc {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    z-index: 2;
+    padding-top: 680px;
+    padding-left: 220px;
+    pointer-events: none;
+}
+
+
+.sitemap_mobile {
+    display: none;
+}
+
+
+
+/* ------ */
+
+/* =========================================DESKTOP======================================== */
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================TABLET======================================== */
+
+
+@media (max-width: 1024px) {
+
+    /* BARRA DE NAVEGAÇÃO */
+
+    nav a {
+        font-size: 2.2rem;
+    }
+
+    .home,
+    .artes,
+    .cursos,
+    .sobre {
+        width: 190px;
+        height: 55px;
+    }
+
+    .cursos {
+        height: 80px;
+    }
+
+    /* ---------- */
+
+    /* HERO */
+    .top-graphics {
+        padding-top: 20px;
+        padding-right: 80px;
+    }
+
+    .logo-fios {
+        width: 900px;
+        height: auto;
+    }
+
+    .logo-fios-comp {
+        width: 1170px;
+        height: auto;
+        top: 35px;
+
+    }
+
+    /* ---------- */
+
+
+
+    .fundo-madeira {
+        height: 3535px;
+    }
+
+    /* ---------- */
+
+    /* TAG CURSOS */
+    .tag-cursos {
+        padding-top: 480px;
+        padding-right: 220px;
+    }
+
+    .imgtagcursos {
+        width: 450px;
+        height: auto;
+
+    }
+
+    .tag-cursos h1 {
+        padding-top: 20px;
+        padding-left: 200px;
+        font-size: 5rem;
+    }
+
+    /* ---------- */
+
+    /* PONTOS BÁSICOS */
+    .pontos-basicos {
+        margin-top: 80px;
+        padding-left: 30px;
+    }
+
+    .bg-pb {
+        width: 926px;
+        height: 632px;
+        background-image: url(./elementos/03_bg_pontos_basicos_tablet.png);
+        display: grid;
+        grid-template-columns: 400px 1fr;
+        gap: 40px;
+    }
+
+    .imgpontos {
+        width: 450px;
+        margin-top: 90px;
+        transform: translateX(-50px);
+    }
+
+    .info-pb h2 {
+        font-size: 4.5rem;
+        margin-top: 80px;
+    }
+
+    .info-pb p {
+        font-size: 20px;
+        margin-top: 20px;
+        width: 300px;
+        line-height: 30px;
+    }
+
+    .botao3_1 {
+        margin-top: 5px;
+        margin-left: 120px;
+        width: 140px;
+    }
+
+    .botao3_1 img {
+        width: 200px;
+    }
+
+    .botao3_1 h4 {
+        font-size: 36px;
+        margin-top: 10px;
+    }
+
+    /* -------------- */
+
+
+    /* PADRÕES E DIAGRAMAS */
+    .diagramas {
+        margin-top: 595px;
+    }
+
+    .bg-pd {
+        width: 926px;
+        height: 853px;
+        background-image: url(./elementos/03_bg_diagramas_tablet.png);
+        display: grid;
+        grid-template-columns: 530px 1fr;
+        gap: 0;
+    }
+
+    .info-pd h2 {
+        font-size: 4.5rem;
+        margin-top: 150px;
+        margin-left: 110px;
+    }
+
+    .info-pd p {
+        font-size: 20px;
+        margin-top: 30px;
+        margin-left: 140px;
+        line-height: 30px;
+        width: 370px;
+    }
+
+    .botao3_2 {
+        margin-top: 60px;
+        margin-left: 180px;
+        width: 140px;
+    }
+
+    .botao3_2 img {
+        width: 200px;
+    }
+
+    .botao3_2 h4 {
+        font-size: 36px;
+        margin-top: 10px;
+    }
+
+
+    .imgdiag {
+        width: 450px;
+        margin-top: 150px;
+    }
+
+    /* ------------------- */
+
+
+    /* GUIA DE MATERIAIS */
+    .guia-materiais {
+        margin-top: 750px;
+    }
+
+    .bg-gm {
+        width: 927px;
+        height: 633px;
+        background-image: url(./elementos/03_bg_materiais_tablet.png);
+        display: grid;
+        grid-template-columns: 400px 1fr;
+        gap: 60px;
+    }
+
+
+    .imgmateriais {
+        width: 450px;
+        margin-top: 90px;
+        transform: translateX(-50px);
+    }
+
+    .imgmateriais:hover {
+        transform: rotate(1deg);
+    }
+
+    .info-gm h2 {
+        font-size: 4.5rem;
+        margin-top: 80px;
+    }
+
+    .info-gm p {
+        font-size: 20px;
+        margin-top: 30px;
+        width: 400px;
+    }
+
+    .botao3_3 {
+        margin-top: 60px;
+        margin-left: 180px;
+        width: 140px;
+    }
+
+    .botao3_3 img {
+        width: 200px;
+    }
+
+    .botao3_3 h4 {
+        font-size: 36px;
+        margin-top: 10px;
+    }
+
+
+    /* ----------------- */
+
+
+
+    /* FOOTER */
+    .sitemap {
+        padding-top: 780px;
+    }
+
+    .bg-sm {
+        width: 900px;
+        height: 730px;
+        background-image: url(./elementos/bg_sitemap_tablet.png);
+        display: grid;
+        grid-template-columns: 1fr 170px 180px 150px 150px;
+        gap: 0px;
+        padding-top: 200px;
+        padding-right: 90px;
+        padding-left: 65px;
+    }
+
+    .sitemap img {
+        display: block;
+        border: none;
+    }
+
+    .ico-sm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        padding-top: 15px;
+    }
+
+    .ico-youtube,
+    .ico-instagram,
+    .ico-pinterest,
+    .ico-whatsapp,
+    .ico-email {
+        width: 60px;
+        height: 60px;
+        transform: translateX(0);
+    }
+
+    .home-sm h1 {
+        text-align: right;
+        padding-right: 40px;
+        line-height: 5rem;
+        font-size: 3.5rem;
+    }
+
+    .home-sm h2 {
+        text-align: right;
+        padding-right: 40px;
+        line-height: 5rem;
+        font-family: "Patrick Hand", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+    }
+
+    .artes-sm h1 {
+        text-align: right;
+        padding-right: 50px;
+        line-height: 5rem;
+        font-family: "Amatic SC", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 3.5rem;
+    }
+
+    .artes-sm h2 {
+        text-align: right;
+        padding-right: 50px;
+        line-height: 5rem;
+        font-family: "Patrick Hand", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+    }
+
+    .cursos-sm h1 {
+        text-align: right;
+        line-height: 5rem;
+        font-family: "Amatic SC", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 3.5rem;
+    }
+
+    .cursos-sm h2 {
+        text-align: right;
+        line-height: 5rem;
+        font-family: "Patrick Hand", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+    }
+
+    .sobre-sm h1 {
+        text-align: right;
+        line-height: 5rem;
+        font-family: "Amatic SC", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 3.5rem;
+    }
+
+    .sobre-sm h2 {
+        text-align: right;
+        line-height: 5rem;
+        font-family: "Patrick Hand", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+    }
+
+    .cc {
+        font-size: 22px;
+        padding-left: 50px;
+    }
+
+    /* ------ */
+
+
+}
+
+/* =========================================TABLET======================================== */
+
+
+
+
+
+
+/* =========================================MOBILE======================================== */
+
+@media (max-width: 700px) {
+    header {
+        padding-right: 0;
+    }
+
+    nav a {
+        font-size: 1.6rem;
+    }
+
+    .home,
+    .artes,
+    .cursos,
+    .sobre {
+        width: 90px;
+        height: 40px;
+    }
+
+    .cursos {
+        height: 60px;
+    }
+
+    /* ---------- */
+
+    .fundo-madeira {
+        height: 4152px;
+    }
+
+    /* ---------- */
+
+
+
+    /* HERO */
+    .top-graphics {
+        margin-top: 20px;
+        margin-left: 35px;
+    }
+
+    .logo-fios {
+        width: 445px;
+        height: auto;
+    }
+
+    .logo-fios-comp {
+        top: 20px;
+        max-width: 590px;
+        height: auto;
+    }
+
+    /* ---------- */
+
+
+
+
+    /* TAG CURSOS */
+    .tag-cursos {
+        padding-top: 280px;
+        padding-left: 210px;
+    }
+
+    .imgtagcursos {
+        width: 300px;
+        height: auto;
+    }
+
+    .tag-cursos h1 {
+        padding-top: 20px;
+        padding-left: 0;
+        font-size: 3rem;
+    }
+
+    /* ---------- */
+
+
+    /* PONTOS BÁSICOS */
+    .pontos-basicos {
+        margin-top: 60px;
+        padding-left: 20px;
+    }
+
+    .bg-pb {
+        width: 360px;
+        height: 1150px;
+        background-image: url(./elementos/03_bg_pontos_basicos_mobile.png);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .imgpontos {
+        margin-top: 180px;
+        width: 350px;
+        transform: translateX(0);
+        order: 2;
+    }
+
+    .info-pb {
+        position: absolute;
+        order: 1;
+        pointer-events: none;
+    }
+
+    .info-pb h2 {
+        font-size: 4rem;
+        margin-top: 60px;
+        margin-left: 40px;
+    }
+
+    .info-pb p {
+        font-size: 18px;
+        margin-top: 420px;
+        margin-left: 40px;
+        width: 250px;
+        text-align: center;
+    }
+
+    .botao3_1 {
+        margin-top: 60px;
+        margin-left: 0;
+        width: 360px;
+    }
+
+    .botao3_1 h4 {
+        font-size: 28px;
+        margin-top: 15px;
+    }
+
+
+    /* -------------- */
+
+
+    /* PADRÕES E DIAGRAMAS */
+    .diagramas {
+        margin-top: 1070px;
+    }
+
+    .bg-pd {
+        width: 380px;
+        height: 1280px;
+        margin-left: 20px;
+        background-image: url(./elementos/03_bg_diagramas_mobile.png);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .info-pd {
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .imgdiag {
+        width: 370px;
+        margin-top: 310px;
+    }
+
+    .info-pd h2 {
+        font-size: 4rem;
+        width: 300px;
+        text-align: center;
+        margin-top: 130px;
+        margin-left: 40px;
+    }
+
+    .info-pd p {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 420px;
+        margin-left: 40px;
+        line-height: 30px;
+        width: 290px;
+    }
+
+    .botao3_2 {
+        position: relative;
+        margin-top: 50px;
+        margin-left: 20px;
+        width: 350px;
+    }
+
+    .botao3_2 h4 {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    /* ------------------- */
+
+
+    /* GUIA DE MATERIAIS */
+    .guia-materiais {
+        margin-top: 1190px;
+    }
+
+    .bg-gm {
+        width: 380px;
+        height: 1250px;
+        background-image: url(./elementos/03_bg_materiais_mobile.png);
+        margin-left: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+         transform: translateX(0);
+        gap: 0;
+    }
+
+
+    .imgmateriais {
+        margin-top: 260px;
+        width: 385px;
+        transform: translateX(0);
+        order: 2;
+    }
+
+    .info-gm {
+        position: absolute;
+        order: 1;
+        pointer-events: none;
+    }
+
+
+    .info-gm h2 {
+        font-size: 4rem;
+        text-align: center;
+        width: 300px;
+        margin-top: 50px;
+        margin-left: 30px;
+    }
+
+    .info-gm p {
+        font-size: 18px;
+        margin-top: 480px;
+        margin-left: 40px;
+        width: 280px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .botao3_3 {
+        margin-top: 80px;
+        margin-left: 15px;
+        width: 350px;
+    }
+
+    .botao3_3 h4 {
+        font-size: 28px;
+        margin-top: 15px;
+    }
+
+    /* ----------------- */
+
+
+
+    /* FOOTER */
+    .sitemap {
+        display: none;
+    }
+
+
+    .sitemap_mobile {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 1300px;
+        padding-right: 50px;
+    }
+
+    .sitemap_mobile a {
+        text-decoration: none;
+        color: #2b2b2b;
+    }
+
+    .sitemap_mobile img {
+        display: block;
+        border: none;
+    }
+
+    .bg-sm-mob {
+        position: absolute;
+        width: 420px;
+        height: 151px;
+        background-image: url(./elementos/bg_sitemap_mobile.png);
+        background-size: block;
+        background-repeat: no-repeat;
+        z-index: 3;
+        display: flex;
+        gap: 0px;
+        align-items: center;
+        padding-top: 25px;
+        padding-left: 15px;
+        color: var(--preto-suave);
+    }
+
+    .ico-sm-mob {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        gap: 5px;
+        padding-top: 0;
+    }
+
+    .ico-youtube-mob {
+        width: 50px;
+        height: 50px;
+        transform: translateX(70px) rotate(8deg);
+    }
+
+    .ico-instagram-mob {
+        width: 50px;
+        height: 50px;
+        transform: translateX(80px) rotate(8deg);
+    }
+
+    .ico-pinterest-mob {
+        width: 50px;
+        height: 50px;
+        transform: translateX(90px) rotate(8deg);
+    }
+
+    .ico-whatsapp-mob {
+        width: 50px;
+        height: 50px;
+        transform: translateX(100px) rotate(8deg);
+    }
+
+    .ico-email-mob {
+        width: 50px;
+        height: 50px;
+        transform: translateX(110px) rotate(8deg);
+    }
+
+
+    .cc-mob {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        z-index: 3;
+        padding-top: 130px;
+        padding-left: 40px;
+        pointer-events: none;
+        text-align: center;
+    }
+
+    /* ------ */
+
+}
+
+
+/* =========================================MOBILE======================================== */
+
+
+
+
+/* =========================================MOBILE 2======================================== */
+
+@media (max-height: 500px) {
+    header {
+        padding-right: 0;
+    }
+
+    nav a {
+        font-size: 1.6rem;
+    }
+
+    .home,
+    .artes,
+    .cursos,
+    .sobre {
+        width: 90px;
+        height: 40px;
+    }
+
+    .cursos {
+        height: 60px;
+    }
+
+    /* ---------- */
+
+    .fundo-madeira {
+        height: 4141px;
+    }
+
+    /* ---------- */
+
+
+
+    /* HERO */
+    .top-graphics {
+        margin-top: 20px;
+        margin-left: 35px;
+    }
+
+    .logo-fios {
+        width: 445px;
+        height: auto;
+    }
+
+    .logo-fios-comp {
+        top: 20px;
+        max-width: 590px;
+        height: auto;
+    }
+
+    /* ---------- */
+
+
+
+
+    /* TAG CURSOS */
+    .tag-cursos {
+        padding-top: 280px;
+        padding-left: 210px;
+    }
+
+    .imgtagcursos {
+        width: 300px;
+        height: auto;
+    }
+
+    .tag-cursos h1 {
+        padding-top: 20px;
+        padding-left: 0;
+        font-size: 3rem;
+    }
+
+    /* ---------- */
+
+
+    /* PONTOS BÁSICOS */
+    .pontos-basicos {
+        margin-top: 50px;
+        padding-left: 20px;
+    }
+
+    .bg-pb {
+        width: 360px;
+        height: 1150px;
+        background-image: url(./elementos/03_bg_pontos_basicos_mobile.png);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .imgpontos {
+        margin-top: 180px;
+        width: 350px;
+        transform: translateX(0);
+        order: 2;
+    }
+
+    .info-pb {
+        position: absolute;
+        order: 1;
+        pointer-events: none;
+    }
+
+    .info-pb h2 {
+        font-size: 4rem;
+        margin-top: 80px;
+        margin-left: 40px;
+    }
+
+    .info-pb p {
+        font-size: 18px;
+        margin-top: 420px;
+        margin-left: 40px;
+        width: 250px;
+        text-align: center;
+    }
+
+    .botao3_1 {
+        margin-top: 60px;
+        margin-left: 0;
+        width: 360px;
+    }
+
+    .botao3_1 h4 {
+        font-size: 28px;
+        margin-top: 15px;
+    }
+
+
+    /* -------------- */
+
+
+    /* PADRÕES E DIAGRAMAS */
+    .diagramas {
+        margin-top: 1070px;
+    }
+
+    .bg-pd {
+        width: 380px;
+        height: 1280px;
+        margin-left: 20px;
+        background-image: url(./elementos/03_bg_diagramas_mobile.png);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .info-pd {
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .imgdiag {
+        width: 370px;
+        margin-top: 310px;
+    }
+
+    .info-pd h2 {
+        font-size: 4rem;
+        width: 300px;
+        text-align: center;
+        margin-top: 130px;
+        margin-left: 40px;
+    }
+
+    .info-pd p {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 420px;
+        margin-left: 40px;
+        line-height: 30px;
+        width: 290px;
+    }
+
+    .botao3_2 {
+        position: relative;
+        margin-top: 50px;
+        margin-left: 20px;
+        width: 350px;
+    }
+
+    .botao3_2 h4 {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    /* ------------------- */
+
+
+    /* GUIA DE MATERIAIS */
+    .guia-materiais {
+        margin-top: 1190px;
+    }
+
+    .bg-gm {
+        width: 380px;
+        height: 1250px;
+        background-image: url(./elementos/03_bg_materiais_mobile.png);
+        margin-left: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        transform: translateX(0);
+        gap: 0;
+    }
+
+
+    .imgmateriais {
+        margin-top: 260px;
+        width: 385px;
+        transform: translateX(0);
+        order: 2;
+    }
+
+    .info-gm {
+        position: absolute;
+        order: 1;
+        pointer-events: none;
+    }
+
+
+    .info-gm h2 {
+        font-size: 4rem;
+        text-align: center;
+        width: 300px;
+        margin-top: 50px;
+        margin-left: 30px;
+    }
+
+    .info-gm p {
+        font-size: 18px;
+        margin-top: 480px;
+        margin-left: 40px;
+        width: 280px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .botao3_3 {
+        margin-top: 80px;
+        margin-left: 15px;
+        width: 350px;
+    }
+
+    .botao3_3 h4 {
+        font-size: 28px;
+        margin-top: 15px;
+    }
+
+    /* ----------------- */
+
+
+
+    /* FOOTER */
+    .sitemap {
+        display: none;
+    }
+
+
+    .sitemap_mobile {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 1300px;
+        padding-right: 50px;
+    }
+
+    .sitemap_mobile a {
+        text-decoration: none;
+        color: #2b2b2b;
+    }
+
+    .sitemap_mobile img {
+        display: block;
+        border: none;
+    }
+
+    .bg-sm-mob {
+        position: absolute;
+        width: 420px;
+        height: 151px;
+        background-image: url(./elementos/bg_sitemap_mobile.png);
+        background-size: block;
+        background-repeat: no-repeat;
+        z-index: 3;
+        display: flex;
+        gap: 0px;
+        align-items: center;
+        padding-top: 25px;
+        padding-left: 15px;
+        color: var(--preto-suave);
+    }
+
+    .ico-sm-mob {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        gap: 5px;
+        padding-top: 0;
+    }
+
+    .ico-youtube-mob {
+        width: 50px;
+        height: 50px;
+        transform: translateX(70px) rotate(8deg);
+    }
+
+    .ico-instagram-mob {
+        width: 50px;
+        height: 50px;
+        transform: translateX(80px) rotate(8deg);
+    }
+
+    .ico-pinterest-mob {
+        width: 50px;
+        height: 50px;
+        transform: translateX(90px) rotate(8deg);
+    }
+
+    .ico-whatsapp-mob {
+        width: 50px;
+        height: 50px;
+        transform: translateX(100px) rotate(8deg);
+    }
+
+    .ico-email-mob {
+        width: 50px;
+        height: 50px;
+        transform: translateX(110px) rotate(8deg);
+    }
+
+
+    .cc-mob {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        z-index: 3;
+        padding-top: 130px;
+        padding-left: 40px;
+        pointer-events: none;
+        text-align: center;
+    }
+
+    /* ------ */
+
+}
+
+
+/* =========================================MOBILE 2======================================== */

@@ -1,0 +1,2010 @@
+/* PADRÕES */
+:root {
+    --preto-suave: #2b2b2b;
+    --azul-petroleo: #264653;
+    --azul-indigo: #2E3E75;
+    --bege-areia: #DCC9A6;
+    --verde-folha: #3A704B;
+    --dourado: #C49E44;
+    --blue-mist: #6E94B3;
+    /* --shadow: definir depois */
+}
+
+/* ---------- */
+
+
+/* RESET SIMPLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* ---------- */
+
+
+
+/* =========================================DESKTOP======================================== */
+
+
+/* BARRA DE NAVEGAÇÃO */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: #ffffff00;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    top: 0;
+    gap: 0;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #2b2b2b;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.6rem;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    /* ajuste fino da distância do sublinhado */
+    width: 0%;
+    height: 2px;
+    background-color: var(--preto-suave);
+    /* sublinhado da cor do texto */
+    opacity: 0.5;
+    transition: width 0.35s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+.home,
+.artes,
+.cursos,
+.sobre {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 5px;
+    box-shadow: -3px -3px 10px #2b2b2b;
+    width: 280px;
+    height: 65px;
+}
+
+.home {
+    background-color: var(--bege-areia);
+    /* transform: rotate(1deg); */
+}
+
+.artes {
+    background-color: var(--dourado);
+    height: 90px;
+}
+
+.cursos {
+    background-color: var(--blue-mist);
+}
+
+.sobre {
+    background-color: var(--verde-folha);
+}
+
+/* ---------- */
+
+
+/* FUNDO DE MADEIRA */
+.fundo-madeira {
+    background-image: url(./elementos/fundomadeira.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 5758px;
+    padding-bottom: 0;
+}
+
+/* ---------- */
+
+
+/* HERO */
+.top-graphics {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 35px;
+
+}
+
+.logo-fios {
+    position: absolute;
+    top: 0;
+    max-width: 1422px;
+    height: auto;
+    z-index: 1000;
+    pointer-events: none;
+    /*não impedir o clique de algo que está abaixo */
+}
+
+.logo-fios-comp {
+    position: absolute;
+    top: 0;
+    max-width: 2051px;
+    height: auto;
+    z-index: 1001;
+    pointer-events: none;
+    /*não impedir o clique de algo que está abaixo */
+}
+
+/* ---------- */
+
+
+/* TAG ARTESANATO */
+.tag-artes {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 720px;
+    padding-left: 500px;
+}
+
+.imgtagartes {
+    position: absolute;
+    width: 654px;
+    height: 197;
+    z-index: 100;
+}
+
+.tag-artes h1 {
+    position: absolute;
+    z-index: 101;
+    padding-top: 30px;
+    padding-left: 100px;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 6rem;
+    color: var(--azul-petroleo);
+}
+
+/* ---------- */
+
+
+/* CROCHÊ */
+.croche {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    margin-left: 0;
+    z-index: 10;
+    transition: transform 0.2s ease;
+}
+
+.bg-croche {
+    position: absolute;
+    background-image: url(./elementos/02_kraft1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1313px;
+    height: 896px;
+    display: grid;
+    grid-template-columns: 1fr 650px;
+    gap: 50px;
+}
+
+.imgcroche {
+    padding-top: 80px;
+}
+
+.imgcroche:hover {
+    transform: rotate(5deg);
+}
+
+.info-croche h2 {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5.5rem;
+    color: #2b2b2b;
+    margin-top: 90px;
+    text-align: right;
+}
+
+.info-croche p {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+    color: #2b2b2b;
+    margin-top: 30px;
+    text-align: right;
+    padding-left: 200px;
+    line-height: 40px;
+}
+
+.botao2_1 {
+    position: relative;
+    margin-top: 50px;
+    margin-left: 260px;
+    display: flex;
+    justify-content: center;
+    width: 360px;
+}
+
+.botao2_1 img {
+    position: absolute;
+}
+
+
+.botao2_1 h3 {
+    position: absolute;
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    margin-top: 20px;
+    color: var(--azul-petroleo);
+}
+
+
+/* ------ */
+
+
+/* MACRAME */
+.macrame {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 800px;
+    padding-left: 100px;
+    transition: transform 0.2s ease;
+}
+
+.bg-macrame {
+    position: absolute;
+    width: 1313px;
+    height: 1241px;
+    background-image: url(./elementos/02_kraft2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 20;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.imgmacrame {
+    margin-top: 220px;
+    transform: translateX(-50px);
+}
+
+.imgmacrame:hover {
+    transform: rotate(1deg);
+}
+
+
+.info-macrame h2 {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5.5rem;
+    color: #2b2b2b;
+    margin-top: 200px;
+}
+
+.info-macrame p {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+    color: #2b2b2b;
+    margin-top: 30px;
+    width: 480px;
+    line-height: 40px;
+}
+
+.botao2_2 {
+    position: relative;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    width: 360px;
+    transform: rotate(-5deg);
+}
+
+.botao2_2 img {
+    position: absolute;
+    z-index: 20;
+}
+
+.botao2_2 h3 {
+    position: absolute;
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    margin-top: 20px;
+    color: var(--azul-petroleo);
+    z-index: 21;
+}
+
+/* ------- */
+
+
+
+/* CESTARIA */
+.cestaria {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1060px;
+    margin-left: 0;
+    z-index: 30;
+    transition: transform 0.2s ease;
+}
+
+.bg-cestaria {
+    position: absolute;
+    background-image: url(./elementos/02_kraft3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1313px;
+    height: 896px;
+    display: grid;
+    grid-template-columns: 1fr 650px;
+    gap: 50px;
+}
+
+.imgcestaria {
+    padding-top: 80px;
+}
+
+.imgcestaria:hover {
+    transform: rotate(-4deg);
+}
+
+.info-cestaria h2 {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5.5rem;
+    color: #2b2b2b;
+    margin-top: 90px;
+    text-align: right;
+}
+
+.info-cestaria p {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+    color: #2b2b2b;
+    margin-top: 30px;
+    text-align: right;
+    padding-left: 180px;
+    line-height: 40px;
+}
+
+.botao2_3 {
+    position: relative;
+    margin-top: 50px;
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    width: 360px;
+    padding-top: 30px;
+    transform: rotate(-7deg);
+}
+
+.botao2_3 img {
+    position: absolute;
+}
+
+.botao2_3 h3 {
+    position: absolute;
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    margin-top: 20px;
+    color: var(--azul-petroleo);
+}
+
+/* -------- */
+
+
+
+/* COSTURA CRIATIVA */
+.costura {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 830px;
+    padding-left: 100px;
+    z-index: 40;
+    transition: transform 0.2s ease;
+}
+
+.bg-costura {
+    position: absolute;
+    width: 1313px;
+    height: 1241px;
+    background-image: url(./elementos/02_kraft4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 20;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.imgcostura {
+    margin-top: 220px;
+    transform: translateX(-80px);
+}
+
+.imgcostura:hover {
+    transform: rotate(1deg);
+}
+
+.info-costura h2 {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5.5rem;
+    color: #2b2b2b;
+    margin-top: 240px;
+}
+
+.info-costura p {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+    color: #2b2b2b;
+    margin-top: 30px;
+    width: 480px;
+    line-height: 40px;
+}
+
+.botao2_4 {
+    position: relative;
+    margin-top: 100px;
+    margin-left: 40px;
+    display: flex;
+    justify-content: center;
+    width: 360px;
+}
+
+.botao2_4 img {
+    position: absolute;
+}
+
+.botao2_4 h3 {
+    position: absolute;
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    margin-top: 20px;
+    color: var(--azul-petroleo);
+}
+
+/* ---------------- */
+
+
+
+
+
+/* FOOTER */
+.sitemap {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 1389px;
+}
+
+.bg-sm {
+    position: absolute;
+    width: 1419px;
+    height: 730px;
+    background-image: url(./elementos/bg_sitemap.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0px;
+    align-items: flex-start;
+    padding-top: 200px;
+    padding-right: 70px;
+    color: var(--preto-suave);
+}
+
+.sitemap a {
+    text-decoration: none;
+    color: #2b2b2b;
+}
+
+.sitemap img {
+    display: block;
+    border: none;
+}
+
+.ico-sm {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    gap: 5px;
+    padding-top: 40px;
+}
+
+.ico-youtube {
+    width: 72px;
+    height: 72px;
+    transform: translateX(70px);
+}
+
+.ico-instagram {
+    width: 72px;
+    height: 72px;
+    transform: translateX(80px);
+}
+
+.ico-pinterest {
+    width: 72px;
+    height: 72px;
+    transform: translateX(90px);
+}
+
+.ico-whatsapp {
+    width: 72px;
+    height: 72px;
+    transform: translateX(100px);
+}
+
+.ico-email {
+    width: 72px;
+    height: 72px;
+    transform: translateX(110px);
+}
+
+.home-sm h1 {
+    text-align: right;
+    padding-right: 40px;
+    line-height: 5rem;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+.home-sm h2 {
+    text-align: right;
+    padding-right: 40px;
+    line-height: 5rem;
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.artes-sm h1 {
+    text-align: right;
+    padding-right: 50px;
+    line-height: 5rem;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+.artes-sm h2 {
+    text-align: right;
+    padding-right: 50px;
+    line-height: 5rem;
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.cursos-sm h1 {
+    text-align: right;
+    line-height: 5rem;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+.cursos-sm h2 {
+    text-align: right;
+    line-height: 5rem;
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.sobre-sm h1 {
+    text-align: right;
+    line-height: 5rem;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+.sobre-sm h2 {
+    text-align: right;
+    line-height: 5rem;
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.cc {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    z-index: 2;
+    padding-top: 680px;
+    padding-left: 220px;
+    pointer-events: none;
+}
+
+
+
+.sitemap_mobile {
+    display: none;
+}
+
+
+/* ------ */
+
+/* =========================================DESKTOP======================================== */
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================TABLET======================================== */
+
+
+@media (max-width: 1024px) {
+
+
+    /* BARRA DE NAVEGAÇÃO */
+
+    nav a {
+        font-size: 2.2rem;
+    }
+
+    .home,
+    .artes,
+    .cursos,
+    .sobre {
+        width: 190px;
+        height: 55px;
+    }
+
+    .artes {
+        height: 80px;
+    }
+
+    /* ---------- */
+
+    /* HERO */
+    .top-graphics {
+        padding-top: 20px;
+        padding-right: 80px;
+    }
+
+    .logo-fios {
+        width: 900px;
+        height: auto;
+    }
+
+    .logo-fios-comp {
+        width: 1300px;
+        height: auto;
+
+    }
+
+    /* ---------- */
+
+
+
+    .fundo-madeira {
+        height: 4250px;
+    }
+
+    /* ---------- */
+
+
+    /* TAG ARTESANATO */
+    .tag-artes {
+        padding-top: 480px;
+        padding-right: 200px;
+    }
+
+    .imgtagartes {
+        width: 500px;
+        height: auto;
+
+    }
+
+    .tag-artes h1 {
+        padding-top: 20px;
+        padding-left: 40px;
+        font-size: 5rem;
+    }
+
+    /* ---------- */
+
+
+    /* CROCHÊ */
+    .croche {
+        margin-top: 80px;
+        margin-left: 0;
+    }
+
+    .bg-croche {
+        width: 850px;
+        height: 690px;
+        display: grid;
+        grid-template-columns: 440px 1fr;
+        gap: 30px;
+    }
+
+    .imgcroche {
+        width: 480px;
+        padding-top: 80px;
+    }
+
+    .info-croche h2 {
+        font-size: 4.5rem;
+        margin-top: 90px;
+    }
+
+    .info-croche p {
+        font-size: 20px;
+        margin-top: 20px;
+        padding-left: 160px;
+        line-height: 30px;
+    }
+
+    .botao2_1 {
+        margin-top: 30px;
+        margin-left: 240px;
+        width: 140px;
+    }
+
+    .botao2_1 img {
+        width: 200px;
+    }
+
+    .botao2_1 h3 {
+        font-size: 36px;
+        margin-top: 10px;
+    }
+
+    /* ------ */
+
+
+    /* MACRAME */
+    .macrame {
+        margin-top: 620px;
+        padding-left: 0;
+    }
+
+    .bg-macrame {
+        width: 920px;
+        height: 950px;
+        background-image: url(./elementos/02_kraft2_tablet.png);
+        display: grid;
+        grid-template-columns: 400px 1fr;
+        gap: 35px;
+    }
+
+    .imgmacrame {
+        width: 450px;
+        margin-top: 200px;
+        padding-right: 20px;
+        transform: translateX(-50px);
+    }
+
+    .imgmacrame:hover {
+        transform: rotate(1deg);
+    }
+
+    .info-macrame h2 {
+        font-size: 4.5rem;
+        margin-top: 150px;
+    }
+
+    .info-macrame p {
+        font-size: 20px;
+        margin-top: 20px;
+        width: 290px;
+        line-height: 30px;
+    }
+
+    .botao2_2 {
+        margin-top: 35px;
+        margin-left: 30px;
+        width: 200px;
+    }
+
+    .botao2_2 img {
+        width: 200px;
+    }
+
+    .botao2_2 h3 {
+        font-size: 36px;
+        margin-top: 10px;
+    }
+
+    /* ------- */
+
+
+
+    /* CESTARIA */
+    .cestaria {
+        margin-top: 800px;
+        margin-left: 0;
+    }
+
+    .bg-cestaria {
+        background-image: url(./elementos/02_kraft3.png);
+        width: 1000px;
+        height: 690px;
+        display: grid;
+        grid-template-columns: 1fr 500px;
+        gap: 40px;
+    }
+
+    .imgcestaria {
+        width: 450px;
+        padding-top: 90px;
+    }
+
+    .info-cestaria h2 {
+        font-size: 4.5rem;
+        margin-top: 90px;
+    }
+
+    .info-cestaria p {
+        font-size: 20px;
+        margin-top: 20px;
+        padding-left: 130px;
+        line-height: 30px;
+    }
+
+    .botao2_3 {
+        margin-top: 50px;
+        margin-left: 100px;
+        width: 360px;
+        padding-top: 15px;
+    }
+
+    .botao2_3 img {
+        width: 200px;
+    }
+
+    .botao2_3 h3 {
+        font-size: 36px;
+        margin-top: 10px;
+    }
+
+    /* -------- */
+
+
+
+    /* COSTURA CRIATIVA */
+    .costura {
+        margin-top: 640px;
+        padding-left: 100px;
+    }
+
+    .bg-costura {
+        width: 936px;
+        height: 780px;
+        background-image: url(./elementos/02_kraft4_tablet.png);
+        display: grid;
+        grid-template-columns: 450px 1fr;
+        gap: 0;
+    }
+
+    .imgcostura {
+        width: 420px;
+        margin-top: 180px;
+        /* transform: translateX(); */
+    }
+
+    .imgcostura:hover {
+        transform: rotate(3deg);
+    }
+
+    .info-costura h2 {
+        font-size: 4.5rem;
+        margin-top: 160px;
+    }
+
+    .info-costura p {
+        font-size: 20px;
+        margin-top: 20px;
+        width: 300px;
+        line-height: 30px;
+    }
+
+    .botao2_4 {
+        margin-top: 25px;
+        margin-left: 35px;
+        display: flex;
+        justify-content: center;
+        width: 360px;
+    }
+
+    .botao2_4 img {
+        width: 200px;
+    }
+
+    .botao2_4 h3 {
+        font-size: 36px;
+        margin-top: 10px;
+    }
+
+    /* ---------------- */
+
+
+    /* FOOTER */
+    .sitemap {
+        padding-top: 780px;
+    }
+
+    .bg-sm {
+        width: 900px;
+        height: 730px;
+        background-image: url(./elementos/bg_sitemap_tablet.png);
+        display: grid;
+        grid-template-columns: 1fr 170px 180px 150px 150px;
+        gap: 0px;
+        padding-top: 200px;
+        padding-right: 90px;
+        padding-left: 65px;
+    }
+
+    .sitemap img {
+        display: block;
+        border: none;
+    }
+
+    .ico-sm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        padding-top: 15px;
+    }
+
+    .ico-youtube,
+    .ico-instagram,
+    .ico-pinterest,
+    .ico-whatsapp,
+    .ico-email {
+        width: 60px;
+        height: 60px;
+        transform: translateX(0);
+    }
+
+    .home-sm h1 {
+        text-align: right;
+        padding-right: 40px;
+        line-height: 5rem;
+        font-size: 3.5rem;
+    }
+
+    .home-sm h2 {
+        text-align: right;
+        padding-right: 40px;
+        line-height: 5rem;
+        font-family: "Patrick Hand", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+    }
+
+    .artes-sm h1 {
+        text-align: right;
+        padding-right: 50px;
+        line-height: 5rem;
+        font-family: "Amatic SC", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 3.5rem;
+    }
+
+    .artes-sm h2 {
+        text-align: right;
+        padding-right: 50px;
+        line-height: 5rem;
+        font-family: "Patrick Hand", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+    }
+
+    .cursos-sm h1 {
+        text-align: right;
+        line-height: 5rem;
+        font-family: "Amatic SC", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 3.5rem;
+    }
+
+    .cursos-sm h2 {
+        text-align: right;
+        line-height: 5rem;
+        font-family: "Patrick Hand", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+    }
+
+    .sobre-sm h1 {
+        text-align: right;
+        line-height: 5rem;
+        font-family: "Amatic SC", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 3.5rem;
+    }
+
+    .sobre-sm h2 {
+        text-align: right;
+        line-height: 5rem;
+        font-family: "Patrick Hand", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+    }
+
+    .cc {
+        font-size: 22px;
+        padding-left: 50px;
+    }
+}
+
+/* ------ */
+
+/* =========================================TABLET======================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================MOBILE======================================== */
+
+@media (max-width: 700px) {
+    header {
+        padding-right: 0;
+    }
+
+    nav a {
+        font-size: 1.6rem;
+    }
+
+    .home,
+    .artes,
+    .cursos,
+    .sobre {
+        width: 90px;
+        height: 40px;
+    }
+
+    .artes {
+        height: 60px;
+    }
+
+    /* ---------- */
+
+    .fundo-madeira {
+        height: 4662px;
+    }
+
+    /* ---------- */
+
+
+
+    /* HERO */
+    .top-graphics {
+        margin-top: 20px;
+        margin-left: 35px;
+    }
+
+    .logo-fios {
+        width: 445px;
+        height: auto;
+    }
+
+    .logo-fios-comp {
+        max-width: 600px;
+        height: auto;
+    }
+
+    /* ---------- */
+
+
+    /* TAG ARTESANATO */
+    .tag-artes {
+        padding-top: 280px;
+        padding-left: 200px;
+    }
+
+    .imgtagartes {
+        width: 350px;
+        height: 200;
+    }
+
+    .tag-artes h1 {
+        padding-top: 20px;
+        padding-left: 10px;
+        font-size: 3rem;
+    }
+
+    /* ---------- */
+
+
+    /* CROCHÊ */
+    .croche {
+        margin-top: 50px;
+        margin-left: 0;
+    }
+
+    .bg-croche {
+        background-image: url(./elementos/02_kraft1_mobile.png);
+        width: 344px;
+        height: 1005px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .imgcroche {
+        padding-top: 130px;
+        width: 340px;
+        order: 2;
+    }
+
+
+    .info-croche {
+        position: absolute;
+        order: 1;
+        pointer-events: none;
+    }
+
+    .info-croche h2 {
+        font-size: 4rem;
+        margin-top: 50px;
+        margin-right: 20px;
+        text-align: center;
+    }
+
+    .info-croche p {
+        font-size: 18px;
+        margin-top: 360px;
+        text-align: center;
+        width: 260px;
+        padding-left: 0;
+        margin-left: 30px;
+        line-height: 30px;
+    }
+
+    .botao2_1 {
+        position: relative;
+        margin-top: 30px;
+        margin-left: 0;
+        padding-right: 20px;
+        display: flex;
+        justify-content: center;
+        width: 360px;
+    }
+
+    .botao2_1 h3 {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+
+    /* ------ */
+
+
+    /* MACRAME */
+    .macrame {
+        margin-top: 930px;
+        padding-left: 0;
+    }
+
+    .bg-macrame {
+        width: 375px;
+        height: 1090px;
+        background-image: url(./elementos/02_kraft2_mobile.png);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .imgmacrame {
+        margin-top: 200px;
+        width: 340px;
+        transform: translateX(0);
+        margin-left: 20px;
+        order: 2;
+    }
+
+    .imgmacrame:hover {
+        transform: rotate(1deg);
+    }
+
+    .info-macrame {
+        position: absolute;
+        order: 1;
+        pointer-events: none;
+    }
+
+    .info-macrame h2 {
+        font-size: 4rem;
+        margin-top: 100px;
+        margin-left: 100px;
+    }
+
+    .info-macrame p {
+        font-size: 18px;
+        margin-top: 380px;
+        margin-left: 35px;
+        width: 290px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .botao2_2 {
+
+        margin-top: 40px;
+        margin-left: 0;
+        width: 360px;
+    }
+
+
+    .botao2_2 h3 {
+        font-size: 28px;
+        margin-top: 20px;
+
+    }
+
+    /* ------- */
+
+
+
+    /* CESTARIA */
+    .cestaria {
+        margin-top: 1050px;
+        margin-left: 15px;
+    }
+
+    .bg-cestaria {
+        background-image: url(./elementos/02_kraft3_mobile.png);
+        width: 360px;
+        height: 1000px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .imgcestaria {
+        padding-top: 140px;
+        padding-left: 10px;
+        width: 340px;
+
+    }
+
+    .info-cestaria {
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .info-cestaria h2 {
+        font-size: 4rem;
+        margin-top: 50px;
+        margin-right: 10px;
+        text-align: center;
+    }
+
+    .info-cestaria p {
+        font-size: 18px;
+        width: 280px;
+        margin-top: 360px;
+        text-align: center;
+        padding-left: 0;
+        margin-left: 35px;
+        line-height: 30px;
+    }
+
+    .botao2_3 {
+        margin-top: 20px;
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        width: 360px;
+        padding-top: 30px;
+        transform: rotate(-7deg);
+    }
+
+    .botao2_3 h3 {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    /* -------- */
+
+
+
+    /* COSTURA CRIATIVA */
+    .costura {
+        margin-top: 950px;
+        padding-left: 50px;
+    }
+
+    .bg-costura {
+        width: 350px;
+        height: 1120px;
+        background-image: url(./elementos/02_kraft4_mobile.png);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .imgcostura {
+        width: 320px;
+        margin-top: 250px;
+        margin-left: 10px;
+        transform: translateX(0);
+        order: 2;
+    }
+
+    .info-costura {
+        position: absolute;
+        order: 1;
+        pointer-events: none;
+    }
+
+    .info-costura h2 {
+        width: 250px;
+        text-align: center;
+        font-size: 4rem;
+        margin-top: 70px;
+        margin-left: 45px;
+    }
+
+    .info-costura p {
+        font-size: 18px;
+        margin-top: 380px;
+        margin-left: 30px;
+        width: 280px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .botao2_4 {
+        margin-top: 20px;
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        width: 360px;
+    }
+
+    .botao2_4 h3 {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    /* ---------------- */
+
+
+    /* FOOTER */
+    .sitemap {
+        display: none;
+    }
+
+
+    .sitemap_mobile {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 1150px;
+        padding-right: 50px;
+    }
+
+    .sitemap_mobile a {
+        text-decoration: none;
+        color: #2b2b2b;
+    }
+
+    .sitemap_mobile img {
+        display: block;
+        border: none;
+    }
+
+    .bg-sm-mob {
+        position: absolute;
+        width: 420px;
+        height: 151px;
+        background-image: url(./elementos/bg_sitemap_mobile.png);
+        background-size: block;
+        background-repeat: no-repeat;
+        z-index: 3;
+        display: flex;
+        gap: 0px;
+        align-items: center;
+        padding-top: 25px;
+        padding-left: 15px;
+        color: var(--preto-suave);
+    }
+
+    .ico-sm-mob {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        gap: 5px;
+        padding-top: 0;
+    }
+
+    .ico-youtube-mob {
+        width: 50px;
+        height: 50px;
+        transform: translateX(70px) rotate(8deg);
+    }
+
+    .ico-instagram-mob {
+        width: 50px;
+        height: 50px;
+        transform: translateX(80px) rotate(8deg);
+    }
+
+    .ico-pinterest-mob {
+        width: 50px;
+        height: 50px;
+        transform: translateX(90px) rotate(8deg);
+    }
+
+    .ico-whatsapp-mob {
+        width: 50px;
+        height: 50px;
+        transform: translateX(100px) rotate(8deg);
+    }
+
+    .ico-email-mob {
+        width: 50px;
+        height: 50px;
+        transform: translateX(110px) rotate(8deg);
+    }
+
+
+    .cc-mob {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        z-index: 3;
+        padding-top: 130px;
+        padding-left: 40px;
+        pointer-events: none;
+        text-align: center;
+    }
+
+    /* ------ */
+
+}
+
+/* =========================================MOBILE======================================== */
+
+
+
+
+
+
+
+/* =========================================MOBILE 2======================================== */
+
+@media (max-height: 500px) {
+    header {
+        padding-right: 0;
+    }
+
+    nav a {
+        font-size: 1.6rem;
+    }
+
+    .home,
+    .artes,
+    .cursos,
+    .sobre {
+        width: 90px;
+        height: 40px;
+    }
+
+    .artes {
+        height: 60px;
+    }
+
+    /* ---------- */
+
+    .fundo-madeira {
+        height: 4661px;
+    }
+
+    /* ---------- */
+
+
+
+    /* HERO */
+    .top-graphics {
+        margin-top: 20px;
+        margin-left: 35px;
+    }
+
+    .logo-fios {
+        width: 445px;
+        height: auto;
+    }
+
+    .logo-fios-comp {
+        max-width: 600px;
+        height: auto;
+    }
+
+    /* ---------- */
+
+
+    /* TAG ARTESANATO */
+    .tag-artes {
+        padding-top: 280px;
+        padding-left: 200px;
+    }
+
+    .imgtagartes {
+        width: 350px;
+        height: 200;
+    }
+
+    .tag-artes h1 {
+        padding-top: 20px;
+        padding-left: 10px;
+        font-size: 3rem;
+    }
+
+    /* ---------- */
+
+
+    /* CROCHÊ */
+    .croche {
+        margin-top: 50px;
+        margin-left: 0;
+    }
+
+    .bg-croche {
+        background-image: url(./elementos/02_kraft1_mobile.png);
+        width: 344px;
+        height: 1005px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .imgcroche {
+        padding-top: 130px;
+        width: 340px;
+        order: 2;
+    }
+
+
+    .info-croche {
+        position: absolute;
+        order: 1;
+        pointer-events: none;
+    }
+
+    .info-croche h2 {
+        font-size: 4rem;
+        margin-top: 50px;
+        margin-right: 20px;
+        text-align: center;
+    }
+
+    .info-croche p {
+        font-size: 18px;
+        margin-top: 360px;
+        text-align: center;
+        width: 260px;
+        padding-left: 0;
+        margin-left: 30px;
+        line-height: 30px;
+    }
+
+    .botao2_1 {
+        position: relative;
+        margin-top: 30px;
+        margin-left: 0;
+        padding-right: 20px;
+        display: flex;
+        justify-content: center;
+        width: 360px;
+    }
+
+    .botao2_1 h3 {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+
+    /* ------ */
+
+
+    /* MACRAME */
+    .macrame {
+        margin-top: 930px;
+        padding-left: 0;
+    }
+
+    .bg-macrame {
+        width: 375px;
+        height: 1090px;
+        background-image: url(./elementos/02_kraft2_mobile.png);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .imgmacrame {
+        margin-top: 200px;
+        width: 340px;
+        transform: translateX(25px);
+        order: 2;
+    }
+
+    .imgmacrame:hover {
+        transform: rotate(1deg);
+    }
+
+    .info-macrame {
+        position: absolute;
+        order: 1;
+        pointer-events: none;
+    }
+
+    .info-macrame h2 {
+        font-size: 4rem;
+        margin-top: 100px;
+        margin-left: 100px;
+    }
+
+    .info-macrame p {
+        font-size: 18px;
+        margin-top: 380px;
+        margin-left: 35px;
+        width: 290px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .botao2_2 {
+
+        margin-top: 40px;
+        margin-left: 0;
+        width: 360px;
+    }
+
+
+    .botao2_2 h3 {
+        font-size: 28px;
+        margin-top: 20px;
+
+    }
+
+    /* ------- */
+
+
+
+    /* CESTARIA */
+    .cestaria {
+        margin-top: 1050px;
+        margin-left: 15px;
+    }
+
+    .bg-cestaria {
+        background-image: url(./elementos/02_kraft3_mobile.png);
+        width: 360px;
+        height: 1000px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .imgcestaria {
+        padding-top: 140px;
+        padding-left: 10px;
+        width: 340px;
+
+    }
+
+    .info-cestaria {
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .info-cestaria h2 {
+        font-size: 4rem;
+        margin-top: 50px;
+        margin-right: 10px;
+        text-align: center;
+    }
+
+    .info-cestaria p {
+        font-size: 18px;
+        width: 280px;
+        margin-top: 360px;
+        text-align: center;
+        padding-left: 0;
+        margin-left: 35px;
+        line-height: 30px;
+    }
+
+    .botao2_3 {
+        margin-top: 20px;
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        width: 360px;
+        padding-top: 30px;
+        transform: rotate(-7deg);
+    }
+
+    .botao2_3 h3 {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    /* -------- */
+
+
+
+    /* COSTURA CRIATIVA */
+    .costura {
+        margin-top: 950px;
+        padding-left: 50px;
+    }
+
+    .bg-costura {
+        width: 350px;
+        height: 1120px;
+        background-image: url(./elementos/02_kraft4_mobile.png);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .imgcostura {
+        width: 320px;
+        margin-top: 250px;
+        margin-left: 10px;
+        transform: translateX(0);
+        order: 2;
+    }
+
+    .info-costura {
+        position: absolute;
+        order: 1;
+        pointer-events: none;
+    }
+
+    .info-costura h2 {
+        width: 250px;
+        text-align: center;
+        font-size: 4rem;
+        margin-top: 70px;
+        margin-left: 45px;
+    }
+
+    .info-costura p {
+        font-size: 18px;
+        margin-top: 380px;
+        margin-left: 30px;
+        width: 280px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .botao2_4 {
+        margin-top: 20px;
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        width: 360px;
+    }
+
+    .botao2_4 h3 {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    /* ---------------- */
+
+
+    /* FOOTER */
+    .sitemap {
+        display: none;
+    }
+
+
+    .sitemap_mobile {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 1150px;
+        padding-right: 50px;
+    }
+
+    .sitemap_mobile a {
+        text-decoration: none;
+        color: #2b2b2b;
+    }
+
+    .sitemap_mobile img {
+        display: block;
+        border: none;
+    }
+
+    .bg-sm-mob {
+        position: absolute;
+        width: 420px;
+        height: 151px;
+        background-image: url(./elementos/bg_sitemap_mobile.png);
+        background-size: block;
+        background-repeat: no-repeat;
+        z-index: 3;
+        display: flex;
+        gap: 0px;
+        align-items: center;
+        padding-top: 25px;
+        padding-left: 15px;
+        color: var(--preto-suave);
+    }
+
+    .ico-sm-mob {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        gap: 5px;
+        padding-top: 0;
+    }
+
+    .ico-youtube-mob {
+        width: 50px;
+        height: 50px;
+        transform: translateX(70px) rotate(8deg);
+    }
+
+    .ico-instagram-mob {
+        width: 50px;
+        height: 50px;
+        transform: translateX(80px) rotate(8deg);
+    }
+
+    .ico-pinterest-mob {
+        width: 50px;
+        height: 50px;
+        transform: translateX(90px) rotate(8deg);
+    }
+
+    .ico-whatsapp-mob {
+        width: 50px;
+        height: 50px;
+        transform: translateX(100px) rotate(8deg);
+    }
+
+    .ico-email-mob {
+        width: 50px;
+        height: 50px;
+        transform: translateX(110px) rotate(8deg);
+    }
+
+
+    .cc-mob {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        z-index: 3;
+        padding-top: 130px;
+        padding-left: 40px;
+        pointer-events: none;
+        text-align: center;
+    }
+
+    /* ------ */
+
+}
