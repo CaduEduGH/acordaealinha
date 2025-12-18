@@ -110,7 +110,7 @@ nav a:hover::after {
 
 /* FUNDO DE MADEIRA */
 .fundo-madeira {
-    background-image: url(./Elementos/fundomadeira.jpg);
+    background-image: url(./elementos/fundomadeira.jpg);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -254,7 +254,7 @@ nav a:hover::after {
     position: absolute;
     width: 1320px;
     height: 980px;
-    background-image: url(./Elementos/01_bgwellcome.png);
+    background-image: url(./elementos/01_bgwellcome.png);
     background-size: cover;
     background-repeat: no-repeat;
     display: grid;
@@ -284,7 +284,7 @@ nav a:hover::after {
 }
 
 .infobv {
-    background-image: url(./Elementos/01_nota.png);
+    background-image: url(./elementos/01_nota.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 660px;
@@ -376,7 +376,7 @@ nav a:hover::after {
 
 .bg-dest {
     position: absolute;
-    background-image: url(./Elementos/01_bgdestaque.png);
+    background-image: url(./elementos/01_bgdestaque.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 1112px;
@@ -527,7 +527,7 @@ nav a:hover::after {
     position: absolute;
     width: 1420px;
     height: 1153px;
-    background-image: url(./Elementos/01_bginspira.png);
+    background-image: url(./elementos/01_bginspira.png);
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 30;
@@ -576,7 +576,7 @@ nav a:hover::after {
     position: absolute;
     width: 1419px;
     height: 730px;
-    background-image: url(./Elementos/bg_sitemap.png);
+    background-image: url(./elementos/bg_sitemap.png);
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 3;
@@ -817,7 +817,7 @@ nav a:hover::after {
     .bg-bv {
         width: 1023px;
         height: 708px;
-        background-image: url(./Elementos/01_bgwellcome_tablet.png);
+        background-image: url(./elementos/01_bgwellcome_tablet.png);
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 0;
@@ -877,7 +877,7 @@ nav a:hover::after {
     }
 
     .bg-dest {
-        background-image: url(./Elementos/01_bgdestaque_tablet.png);
+        background-image: url(./elementos/01_bgdestaque_tablet.png);
         width: 903px;
         height: 1045px;
     }
@@ -983,7 +983,7 @@ nav a:hover::after {
     .bg-insp {
         width: 1150px;
         height: 934px;
-        background-image: url(./Elementos/01_bginspira_tablet.png);
+        background-image: url(./elementos/01_bginspira_tablet.png);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 0;
@@ -1223,7 +1223,7 @@ nav a:hover::after {
     .bg-bv {
         width: 460px;
         height: 650px;
-        background-image: url(./Elementos/01_bgwellcome_mobile.png);
+        background-image: url(./elementos/01_bgwellcome_mobile.png);
         display: grid;
         grid-template-columns: 1fr;
         gap: 0;
@@ -1244,7 +1244,7 @@ nav a:hover::after {
     }
 
     .infobv {
-        background-image: url(./Elementos/01_nota.png);
+        background-image: url(./elementos/01_nota.png);
         width: 276px;
         height: 311px;
         order: 1;
@@ -1297,7 +1297,7 @@ nav a:hover::after {
     }
 
     .bg-dest {
-        background-image: url(./Elementos/01_bgdestaque_mobile.png);
+        background-image: url(./elementos/01_bgdestaque_mobile.png);
         width: 446px;
         height: 1434px;
         padding-top: 130px;
@@ -1448,7 +1448,7 @@ nav a:hover::after {
     .bg-insp {
         width: 430px;
         height: 1360px;
-        background-image: url(./Elementos/01_bginspira_mobile.png);
+        background-image: url(./elementos/01_bginspira_mobile.png);
         display: grid;
         grid-template-columns: 1fr;
         justify-content: center;
@@ -1686,7 +1686,7 @@ nav a:hover::after {
     .bg-bv {
         width: 460px;
         height: 650px;
-        background-image: url(./Elementos/01_bgwellcome_mobile.png);
+        background-image: url(./elementos/01_bgwellcome_mobile.png);
         display: grid;
         grid-template-columns: 1fr;
         gap: 0;
@@ -1707,7 +1707,7 @@ nav a:hover::after {
     }
 
     .infobv {
-        background-image: url(./Elementos/01_nota.png);
+        background-image: url(./elementos/01_nota.png);
         width: 276px;
         height: 311px;
         order: 1;
@@ -1760,7 +1760,7 @@ nav a:hover::after {
     }
 
     .bg-dest {
-        background-image: url(./Elementos/01_bgdestaque_mobile.png);
+        background-image: url(./elementos/01_bgdestaque_mobile.png);
         width: 446px;
         height: 1434px;
         padding-top: 130px;
@@ -1911,7 +1911,7 @@ nav a:hover::after {
     .bg-insp {
         width: 430px;
         height: 1360px;
-        background-image: url(./Elementos/01_bginspira_mobile.png);
+        background-image: url(./elementos/01_bginspira_mobile.png);
         display: grid;
         grid-template-columns: 1fr;
         justify-content: center;
